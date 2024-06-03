@@ -1,0 +1,1 @@
+import{j as t}from"./index-BApnoXDo.js";import{A as r}from"./About-C8daDamD.js";import{H as o}from"./Helmet-UV4WuYN8.js";import"./gallery-CpyZUl46.js";const x=()=>t.jsxs("main",{style:{margin:"30px 0"},children:[t.jsx(o,{children:t.jsx("title",{children:"About us"})}),t.jsx(r,{})]});export{x as default};
