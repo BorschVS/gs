@@ -1,0 +1,62 @@
+@import 'src/styles/shared.scss';
+
+.reviewCard {
+  background-color: $primary-white;
+  padding: 22px 16px;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+  }
+}
+
+.thumb {
+  width: 60px;
+  background-color: #fff;
+}
+
+.hiddenTitle {
+  @extend %visuallyHidden;
+}
+
+.text {
+  @extend %text;
+}
+
+.authorContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  @include desktop {
+    flex-direction: column;
+    width: 100%;
+    min-width: 60px;
+    max-width: 120px;
+  }
+}
+
+.reviewContainer {
+  @include desktop {
+    max-width: 70%;
+  }
+}
+
+.info {
+  align-self: center;
+}
+
+.age {
+  color: $medium-grey;
+  font-weight: 600;
+}
+
+.stars {
+  display: flex;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}

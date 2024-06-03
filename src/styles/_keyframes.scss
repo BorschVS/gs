@@ -1,0 +1,38 @@
+@keyframes slideToTop {
+  from {
+    transform: perspective(800px) rotateX(90deg) translateY(100%);
+  }
+  to {
+    transform: perspective(800px) rotateX(0deg) translateY(0);
+  }
+}
+
+@keyframes slideToBot {
+  from {
+    transform: perspective(800px) rotateX(-90deg) translateY(-100%);
+  }
+  to {
+    transform: perspective(800px) rotateX(0deg) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(30px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotateY(0);
+  }
+  100% {
+    transform: translateX(400%) rotateY(90deg);
+    overflow: hidden;
+  }
+}

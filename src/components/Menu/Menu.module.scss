@@ -1,0 +1,110 @@
+@import '/src/styles/shared.scss';
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 40px 40px;
+
+  margin-top: 32px;
+}
+
+.logo path {
+  fill: $primary-white;
+}
+
+.button {
+  margin: 0;
+  background-color: #fff;
+  background-color: $dark-black;
+  color: $primary-white;
+  border: none;
+}
+
+.subtitle {
+  margin-bottom: 50px;
+
+  text-align: center;
+  color: $primary-white;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  @include fromTablet {
+    display: none;
+  }
+}
+
+.menu {
+  @extend %text;
+  margin: 0;
+
+  @include mobile {
+    position: fixed;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    bottom: 0;
+
+    height: 100vh;
+
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+
+    &.isOpen {
+      overflow: visible;
+      visibility: visible;
+      opacity: 1;
+
+      top: 0;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      z-index: 1;
+      background-color: $dark-black;
+
+      transition: top $transition-default, opacity $transition-default, overflow $transition-default, visibility $transition-default;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.number {
+  text-align: center;
+  text-decoration: none;
+  color: $primary-white;
+  font-size: 20px;
+  font-weight: 400;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  @include fromTablet {
+    display: none;
+  }
+}
+
+.link {
+  @extend %link;
+
+  padding: 12px 50px;
+
+  color: $primary-white;
+  align-self: center;
+  border: 1px solid $primary-white;
+
+  transition: color $transition-default, background-color $transition-default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary-white;
+    color: $primary-black;
+  }
+}

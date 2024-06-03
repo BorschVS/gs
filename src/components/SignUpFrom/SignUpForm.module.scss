@@ -1,0 +1,142 @@
+@import 'src/styles/shared.scss';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-family: $font-primary;
+  @include laptopAndDesktop {
+    width: 360px;
+    margin-top: 32px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.input {
+  @extend %text;
+  font-size: 18px;
+  height: 45px;
+  padding: 0 16px;
+  color: $graphite-grey;
+  border: 1px solid $graphite-grey;
+  margin: 8px 0 0;
+
+  &:hover,
+  &:focus {
+    outline: $graphite-grey;
+    border: 1px solid $medium-grey;
+    background-color: #fbfafa;
+  }
+}
+
+.box {
+  margin: 0 0 25px;
+}
+
+.box .label {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-grow: 1;
+  font-weight: 500;
+  margin: 0;
+}
+
+.checkboxLabel {
+  position: relative;
+  display: inline-block;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hiddenCheckbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 1px solid $dark-black;
+}
+
+.checkmark {
+  width: 21px;
+  height: 21px;
+  animation: checkmarkFade 300ms ease-in-out both;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  font-size: 0.9rem;
+
+  @include mobileAndTablet {
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+.button {
+  @extend %primaryButton;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 15px 0;
+}
+
+.text {
+  @extend %text;
+  font-size: 14px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.link {
+  @extend %link;
+  font-size: 0.8rem;
+  transition: color $transition-default;
+}
+
+.link:hover {
+  color: $medium-grey;
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.error {
+  color: $error-red;
+}
+
+@keyframes checkmarkFade {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
